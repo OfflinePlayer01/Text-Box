@@ -1,0 +1,16 @@
+-- just a setup --
+local screenGui = Instance.new("ScreenGui")
+local textBox = Instance.new("TextBox")
+textBox.ClearTextOnFocus = false
+textBox.Size = UDim2.fromScale(.2,.1)
+textBox.Position = UDim2.fromScale(.1,.1)
+textBox.TextEditable = false
+textBox.TextScaled = true
+textBox.Parent = screenGui
+screenGui.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+------------------
+
+textBox.Text = "Your Text"
+textBox:CaptureFocus()
+textBox.CursorPosition = string.len(textBox.Text) + 1
+textBox.SelectionStart = 1
